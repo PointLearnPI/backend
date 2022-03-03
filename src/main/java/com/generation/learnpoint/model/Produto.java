@@ -22,7 +22,7 @@ public class Produto {
 	private String nomep;
 	
 	@NotBlank(message = "O atributo é obrigatório!")
-	@Size(min = 30, max = 1000, message = "O nome do produto deve ter entre 30 e 1000 caracteres")
+	@Size(min = 30, max = 2000, message = "O nome do produto deve ter entre 30 e 1000 caracteres")
 	private String descricao;
 	
 	@NotNull
