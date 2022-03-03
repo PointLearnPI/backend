@@ -10,5 +10,5 @@ import com.generation.learnpoint.model.Categoria;
 @Repository
 public interface CategoriaRepository extends JpaRepository <Categoria, Long> {
 
-    public List<Categoria> findAllByDescricaocContainingIgnoreCase(String descricaoc);
+    public List<Categoria> findAllByNomecContainingIgnoreCase(String nomec);
 }
