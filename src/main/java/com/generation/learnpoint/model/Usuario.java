@@ -61,7 +61,11 @@ public class Usuario {
 		return usuario;
 	}
 
+<<<<<<< HEAD
 	public void setUsuario(String usuario) {
+=======
+	public void setUsuarion(String usuario) {
+>>>>>>> b5f7d91e63a24ee7b82cf66652e3793ebb823268
 		this.usuario = usuario;
 	}
 
@@ -71,5 +75,10 @@ public class Usuario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public void setToken(String gerarBasicToken) {
+		// TODO Auto-generated method stub
+		
 	}
 }
