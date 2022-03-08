@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.generation.learnpoint.model.Usuario;
 import com.generation.learnpoint.model.UsuarioLogin;
 import com.generation.learnpoint.repository.UsuarioRepository;
+import com.generation.learnpoint.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")

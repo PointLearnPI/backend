@@ -29,7 +29,7 @@ public class Usuario {
 	
 	@NotBlank(message = "O atributo é obrigatório!")
 	@Email( message = "O login deve ser um E-mail.")
-	private String login;
+	private String usuario;
 	
 	@NotBlank(message = "O atributo é obrigatório!")
 	@Size(min = 8, message = "A senha deve conter minimo de 8 caracteres")
@@ -57,12 +57,12 @@ public class Usuario {
 		this.nomeu = nomeu;
 	}
 
-	public String getLogin() {
-		return login;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setLogin(String login) {
-		this.login = login;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getSenha() {
