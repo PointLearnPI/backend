@@ -31,9 +31,6 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 	
-	@Autowired
-	private CategoriaRepository categoriaRepository;
-	
 	
 	@GetMapping ("/nome/{nomep}")
 	public ResponseEntity<List<Produto>> findByNome(@PathVariable String nomep) {

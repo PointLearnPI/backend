@@ -12,32 +12,17 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-<<<<<<< HEAD
 @EnableWebSecurity
 public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
+
 
 	@Autowired
 	private UserDetailsService userDetailsService;
 
-	
-=======
-
-@EnableWebSecurity
-public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
-
-	
-	@Autowired
-	private UserDetailsService userDetailsService;
-
->>>>>>> cc58f745cdaccd775fdef411d90aeda948ed13dc
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		
-<<<<<<< HEAD
-=======
-		
->>>>>>> cc58f745cdaccd775fdef411d90aeda948ed13dc
 		 auth.userDetailsService(userDetailsService);
 
 		 auth.inMemoryAuthentication()
@@ -46,23 +31,18 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 			.authorities("ROLE_USER");
 
 	}
-
+	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 
-<<<<<<< HEAD
-	 @Override
-	protected void configure(HttpSecurity http) throws Exception {
-		
-=======
 	
 	 @Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
+	
 		
->>>>>>> cc58f745cdaccd775fdef411d90aeda948ed13dc
 		http.authorizeRequests()
 			.antMatchers("/usuarios/logar").permitAll()
 			.antMatchers("/usuarios/cadastrar").permitAll()
