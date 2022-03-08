@@ -44,12 +44,11 @@ public class UsuarioService {
 
 		Optional<Usuario> usuario = usuarioRepository.findByUsuario(usuarioLogin.get().getUsuario());
 		if (usuario.isPresent()) {
-			if (compararSenhas(usuario.get().getSenha(), usuario.get().getSenha())) {
+			if (compararSenhas(usuarioLogin.get().getSenha(), usuario.get().getSenha())) {
 
 				usuarioLogin.get().setId(usuario.get().getId());
 				usuarioLogin.get().setNomeu(usuario.get().getNomeu());
-				usuarioLogin.get();
-				usuarioLogin.get().setToken(gerarBasicToken(usuario.get().getUsuario(), usuario.get().getSenha()));
+				usuarioLogin.get().setToken(gerarBasicToken(usuarioLogin.get().getUsuario(), usuarioLogin.get().getSenha()));
 				usuarioLogin.get().setSenha(usuario.get().getSenha());
 
 				return usuarioLogin;
