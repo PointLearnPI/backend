@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.learnpoint.model.Produto;
-import com.generation.learnpoint.repository.CategoriaRepository;
 import com.generation.learnpoint.repository.ProdutoRepository;
 
 
