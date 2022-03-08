@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -21,11 +22,11 @@ public class Usuario {
 	private String nomeu;
 	
 	@NotBlank(message = "O atributo é obrigatório!")
-	@Size(min = 3, max = 50, message = "O login deve ter entre 3 e 50 caracteres")
+	@Email( message = "O login deve ser um E-mail.")
 	private String login;
 	
 	@NotBlank(message = "O atributo é obrigatório!")
-	@Size(min = 5, max = 20, message = "A senha deve conter entre 5 e 20 caracteres")
+	@Size(min = 8, message = "A senha deve conter minimo de 8 caracteres")
 	private String senha;
 
 	public Long getId() {
