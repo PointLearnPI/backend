@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.generation.learnpoint.model.Categoria;
 import com.generation.learnpoint.model.Produto;
 import com.generation.learnpoint.repository.ProdutoRepository;
 
@@ -29,6 +30,14 @@ public class ProdutoController {
 
 	@Autowired
 	private ProdutoRepository produtoRepository;
+	
+	
+	
+	@GetMapping ("/{id}")
+	public ResponseEntity<Produto> getById(@PathVariable Long id) {
+		return produtoRepository.findById(id).map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.notFound().build());
+		}
 	
 	
 	@GetMapping ("/nome/{nomep}")
